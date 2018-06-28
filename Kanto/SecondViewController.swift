@@ -42,14 +42,6 @@ class SecondViewController: UIViewController, MKMapViewDelegate, CLLocationManag
         // Dispose of any resources that can be recreated.
     }
     
-    // Centering on your own location as soon
-    // as the UIButton is pressed
-    @IBAction func myLocation(_ sender: Any) {
-        let userLocation = mapView.userLocation
-        let region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 2000, 2000)
-        mapView.setRegion(region, animated: true)
-
-    }
     
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         let location = locations.last as! CLLocation
@@ -64,5 +56,27 @@ class SecondViewController: UIViewController, MKMapViewDelegate, CLLocationManag
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius, regionRadius)
         mapView.setRegion(coordinateRegion, animated: true)
     }
+    
+    // Centering on your own location as soon
+    // as the UIButton is pressed
+    @IBAction func myLocation(_ sender: Any) {
+        let userLocation = mapView.userLocation
+        let region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 2000, 2000)
+        mapView.setRegion(region, animated: true)
+
+    }
+
+    
+    @IBAction func mapType(_ sender: UISegmentedControl) {
+        switch (sender.selectedSegmentIndex) {
+        case 0:
+            mapView.mapType = .satellite
+        case 1:
+            mapView.mapType = .hybrid
+        default:
+            mapView.mapType = .standard
+        }
+    }
+    
 }
 

@@ -86,6 +86,17 @@
                                     <action selector="myLocation:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="FVD-2n-boT"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="VaP-hl-FxC">
+                                <rect key="frame" x="0.0" y="590" width="191" height="29"/>
+                                <segments>
+                                    <segment title="Satellite"/>
+                                    <segment title="Hybrid"/>
+                                    <segment title="Map"/>
+                                </segments>
+                                <connections>
+                                    <action selector="mapType:" destination="8rJ-Kc-sve" eventType="valueChanged" id="7Sk-Fw-hFA"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -93,6 +104,8 @@
                             <constraint firstItem="tE0-WQ-x4W" firstAttribute="bottom" secondItem="O1u-W8-tvY" secondAttribute="bottom" id="5l3-6Q-Sw2"/>
                             <constraint firstItem="tE0-WQ-x4W" firstAttribute="bottom" secondItem="O1u-W8-tvY" secondAttribute="bottom" id="Ohr-Yt-2lK"/>
                             <constraint firstItem="NTd-Sj-0jc" firstAttribute="bottom" secondItem="O1u-W8-tvY" secondAttribute="bottom" id="Pap-5k-r45"/>
+                            <constraint firstItem="VaP-hl-FxC" firstAttribute="bottom" secondItem="O1u-W8-tvY" secondAttribute="bottom" id="cba-b9-o3j"/>
+                            <constraint firstItem="VaP-hl-FxC" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="lPf-bg-dPw"/>
                             <constraint firstItem="tE0-WQ-x4W" firstAttribute="trailing" secondItem="O1u-W8-tvY" secondAttribute="trailing" id="mDH-N6-MIx"/>
                             <constraint firstItem="NTd-Sj-0jc" firstAttribute="trailing" secondItem="O1u-W8-tvY" secondAttribute="trailing" id="mcf-so-8z4"/>
                             <constraint firstItem="tE0-WQ-x4W" firstAttribute="trailing" secondItem="O1u-W8-tvY" secondAttribute="trailing" id="mxD-5K-EqE"/>

@@ -12,10 +12,10 @@ import MapKit
 
 class FirstViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
-    
-    let bastille = Location(name: "Bastille", latitude: 38.607342, longitude: -90.207710)
+    // Example data, subject to change
+    let bastille = Location(name: "Bastille", latitude: 48.853183, longitude: 2.369144)
     let hollywood = Location(name: "Hollywood", latitude: 34.092809, longitude: -118.328661)
-    let stationF = Location(name: "Station F", latitude: 36.848288, longitude: -76.264907)
+    let stationF = Location(name: "Station F", latitude: 48.834810, longitude: 2.370764)
     let school = Location(name: "Ecole 42 de Paris", latitude: 48.896549, longitude: 2.318461)
     lazy var locations = [bastille, hollywood, stationF, school]
     

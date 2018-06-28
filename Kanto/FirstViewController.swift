@@ -19,6 +19,8 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
     let school = Location(name: "Ecole 42 de Paris", latitude: 48.896549, longitude: 2.318461)
     lazy var locations = [bastille, hollywood, stationF, school]
     
+    let mapSegueIdentifier = "ShowLocation"
+    
     @IBOutlet weak var locationsTable: UITableView!
     
     override func viewDidLoad() {
@@ -40,7 +42,6 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     // MARK: - Navigation
-    let mapSegueIdentifier = "ShowLocation"
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if  segue.identifier == mapSegueIdentifier {
